@@ -27,4 +27,9 @@ public class GridFrame extends JFrame
 		this.setLocationRelativeTo(null);
 		this.setVisible(true);
 	}
+
+	public Object getBaseController() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

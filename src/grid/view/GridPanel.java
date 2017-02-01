@@ -43,4 +43,9 @@ public class GridPanel extends JPanel
 	{
 		
 	}
+
+	public Object getBaseController() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
