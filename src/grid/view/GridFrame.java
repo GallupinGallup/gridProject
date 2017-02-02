@@ -10,6 +10,10 @@ public class GridFrame extends JFrame
 {
 	
 	private GridController baseController;
+	public void setBaseController(GridController baseController) {
+		this.baseController = baseController;
+	}
+
 	private GridPanel appPanel;
 	public GridFrame(GridController baseController)
 	{
@@ -22,6 +26,7 @@ public class GridFrame extends JFrame
 	
 	private void setupFrame()
 	{
+		this.setTitle("WHAT ARE THOSE!?!?!?!");
 		this.setContentPane(appPanel);
 		this.setSize(new Dimension(900, 600));
 		this.setLocationRelativeTo(null);
