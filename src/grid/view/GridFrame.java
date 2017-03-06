@@ -1,45 +1,37 @@
 package grid.view;
 
 import javax.swing.JFrame;
-import grid.controller.GridController;
-import grid.view.GridPanel;
-import java.awt.Dimension;
-import javax.swing.*;
 
-public class GridFrame extends JFrame
-{
-	private GridController baseController;
+import grid.controller.GridController;
+
+public class GridFrame extends JFrame {
 	
-	private GridPanel basePanel;
+	private GridController gridController;
 	
-		public GridFrame (GridController baseController)
-		{
-			super();
-			this.baseController = baseController;
-			basePanel = new GridPanel(baseController);
-			
-			setupFrame();
-				
-		}
-		private void setupFrame()
-		{
-			
-			this.setContentPane(basePanel);
-			this.setTitle("Grid Title Of Funnnnn!!!!");
-			this.setSize(new Dimension(1080, 800));
-			this.setResizable(false);
-			
-			this.setVisible(true);
-			
-			
-		}
-		public GridController getBaseController()
-		{
-			return baseController;
-		}
-		public void setBaseController(GridController baseController)
-		{
-			this.baseController = baseController;
-		}
+	private GridPanel gridPanel;
 	
+	public GridFrame(GridController gridController){
+		super();
+		this.gridController = gridController;
+		this.gridPanel = new GridPanel(gridController);
+		
+		this.setupFrame();
+	}
+	
+	public void setupFrame(){
+		this.setContentPane(gridPanel);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		this.setTitle("2D Array Manipulator");
+		
+		this.setSize(900, 900);
+		this.setLocationRelativeTo(null);
+		
+		this.setVisible(true);
+	}
+	
+	public GridController getBaseController(){
+		return gridController;
+	}
+
 }

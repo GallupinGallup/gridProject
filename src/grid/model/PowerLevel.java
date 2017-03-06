@@ -1,16 +1,16 @@
 package grid.model;
 
-public class NumberPanel 
+public class PowerLevel 
 {
 	private int numbers;
 	
 	
 	public String toString()
 	{
-		return "0 is the current number";
+		return "0 is the current power level";
 	}
 	
-	public NumberPanel()
+	public PowerLevel()
 	{
 		numbers = 0;
 	}

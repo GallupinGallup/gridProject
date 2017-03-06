@@ -1,17 +1,17 @@
 package grid.controller;
-import grid.model.NumberPanel;
+import grid.model.PowerLevel;
 import grid.view.GridFrame;
 
 public class GridController
 {
 	private GridFrame baseFrame;
-	private NumberPanel [][] grid;
+	private PowerLevel [][] grid;
 	
 	
 
 	public GridController()
 	{
-		grid = new NumberPanel[9][9];
+		grid = new PowerLevel[9][9];
 		fillGrid();
 		
 		
@@ -28,18 +28,18 @@ public class GridController
 		{
 			for(int col = 0; col < grid[0].length; col++)
 			{
-				grid[row][col] = new NumberPanel();
+				grid[row][col] = new PowerLevel();
 			}
 		}
 		
 	}
 	
 	
-	public NumberPanel[][] getGrid() 
+	public PowerLevel[][] getGrid() 
 	{
 		return grid;
 	}
-	public void setGrid(NumberPanel[][] grid) 
+	public void setGrid(PowerLevel[][] grid) 
 	{
 		this.grid = grid;
 	}
